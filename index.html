@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="StyleHub — современная одежда, обувь и аксессуары">
+  <title>StyleHub — одежда со своим характером</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="header">
+  <a class="logo" href="#" aria-label="StyleHub главная">STYLE<span>HUB</span><i>.</i></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">☰</button>
+  <nav id="nav">
+    <a href="#home">Главная</a><a href="#catalog">Одежда</a><a href="#catalog" data-category="Обувь">Обувь</a>
+    <a href="#catalog" data-category="Аксессуары">Аксессуары</a><a href="#contacts">Контакты</a>
+  </nav>
+  <div class="header-actions">
+    <button class="icon-btn" id="searchToggle" aria-label="Поиск">⌕</button>
+    <button class="icon-btn" id="accountBtn" aria-label="Аккаунт">♙</button>
+    <button class="cart-btn" id="cartBtn">Корзина <span id="cartCount">0</span></button>
+  </div>
+</header>
+<div class="searchbar hidden" id="searchBar"><input id="searchInput" placeholder="Найти товар или бренд…"><button id="searchGo">Искать</button></div>
+<main>
+  <section class="hero" id="home">
+    <div class="hero-content"><p class="eyebrow">НОВАЯ КОЛЛЕКЦИЯ · 2026</p><h1>Твой стиль.<br><em>Твои правила.</em></h1>
+      <p class="hero-copy">Базовые вещи, которые работают каждый день. Собери образ без лишнего.</p>
+      <a class="button button-light" href="#catalog">Смотреть коллекцию <span>↗</span></a>
+    </div>
+    <div class="hero-note"><span>01 / 03</span><span>LESS, BUT BETTER.</span></div>
+  </section>
+  <section class="section intro"><div><p class="eyebrow">ПОДБОРКА STYLEHUB</p><h2>Вещи, которые<br>говорят за тебя.</h2></div><p>Современный гардероб начинается с простых форм, приятных материалов и деталей, которые имеют значение.</p></section>
+  <section class="section" id="catalog">
+    <div class="section-heading"><div><p class="eyebrow">ВЫБИРАЙ СВОЁ</p><h2>Каталог <span id="catalogCount"></span></h2></div><button class="text-button" id="clearFilters">Сбросить фильтры ↺</button></div>
+    <div class="catalog-tools">
+      <input id="catalogSearch" placeholder="Поиск по товарам…">
+      <select id="categoryFilter"><option value="">Все категории</option><option>Одежда</option><option>Обувь</option><option>Аксессуары</option></select>
+      <select id="brandFilter"><option value="">Все бренды</option></select>
+      <select id="sizeFilter"><option value="">Все размеры</option></select>
+      <select id="colorFilter"><option value="">Все цвета</option></select>
+      <div class="price-range"><input id="minPrice" type="number" min="0" placeholder="Цена от"><input id="maxPrice" type="number" min="0" placeholder="Цена до"></div>
+      <select id="sortFilter"><option value="">Сначала популярные</option><option value="price-asc">Сначала дешевле</option><option value="price-desc">Сначала дороже</option></select>
+    </div>
+    <div class="product-grid" id="products"><div class="loading">Загружаем коллекцию…</div></div>
+  </section>
+  <section class="statement"><p class="eyebrow">STYLE IS PERSONAL</p><h2>Меньше шума.<br><em>Больше тебя.</em></h2><a href="#catalog" class="button button-dark">Найти свой образ ↗</a></section>
+  <section class="section benefits"><div><b>01</b><h3>Продуманный выбор</h3><p>Базовые вещи и акценты для повседневного гардероба.</p></div><div><b>02</b><h3>Простой заказ</h3><p>Выбери размер, добавь в корзину и оформи заказ онлайн.</p></div><div><b>03</b><h3>Твой темп</h3><p>Понятный каталог без лишних шагов и сложных меню.</p></div></section>
+</main>
+<footer id="contacts"><a class="logo logo-footer" href="#">STYLE<span>HUB</span><i>.</i></a><p>Одежда со своим характером.</p><p>Вопросы по заказам: <a href="mailto:hello@example.com">hello@example.com</a></p><small>© 2026 STYLEHUB. Демонстрационный магазин — перед запуском укажи реальные контакты и условия доставки.</small></footer>
+<div class="toast" id="toast"></div>
+<div class="modal hidden" id="modal"><div class="modal-backdrop" data-close="1"></div><div class="modal-card"><button class="modal-close" data-close="1">×</button><div id="modalContent"></div></div></div>
+<script src="/app.js"></script>
+</body>
+</html>
